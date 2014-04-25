@@ -8,7 +8,7 @@
   # Generate memes using http://memegenerator.net
 
 module Meme
-  class Meme
+  class Generator
 
     ##
     # Sometimes your meme will have an error, fix it!

@@ -2,4 +2,4 @@
 
 require 'meme'
 
-Meme::Meme.run ARGV
+Meme::Generator.run ARGV
