@@ -24,14 +24,6 @@ module Meme
     ##
     # Looks up generator name
 
-    def GENERATORS.match(name)
-      # TODO  meme Y U NO DEMETAPHONE?
-      return [name,self[name]] if has_key? name
-      matcher = Regexp.new(name, Regexp::IGNORECASE)
-      _, generator = find { |k,v| matcher =~ k || v.grep(matcher).any? }
-      generator || self[name] # raises the error if generator is nil
-    end
-
     def parse(name, attributes)
       [attributes[:imageID], name, attributes[:generatorID], attributes[:default]]
     end
@@ -59,21 +51,17 @@ module Meme
         false
       end
 
-      # puts "text_only:#{text_only} generator:#{generator}"
-
       abort "#{$0} [GENERATOR|--list] LINE [ADDITONAL_LINES]" if ARGV.empty?
 
       meme = new generator
       link = meme.generate(*ARGV)
-
-      meme.paste(link) unless text_only
 
       if $stdout.tty? || text_only
         puts link
       else
         puts meme.fetch link
       end
-      link
+
     rescue Interrupt
       exit
     rescue SystemExit
@@ -148,29 +136,6 @@ module Meme
         res = http.request get
       end
       res.body
-    end
-
-    ##
-    # Tries to find clipboard copy executable and if found puts +link+ in your
-    # clipboard.
-
-    def paste link
-      require 'pasteboard'
-
-      clipboard = Pasteboard.new
-
-      jpeg = fetch link
-
-      clipboard.put_jpeg_url jpeg, link
-    rescue LoadError
-      clipboard = %w{
-        /usr/bin/pbcopy
-        /usr/bin/xclip
-      }.find { |path| File.exist? path }
-
-      if clipboard
-        IO.popen clipboard, 'w' do |io| io.write link end
-      end
     end
 
   end

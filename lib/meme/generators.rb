@@ -8,6 +8,7 @@ module Meme
     'Philosoraptor'    => { :imageID => 984, :generatorID => 17 },
     'Scumbag-Steve'    => { :imageID => 366130, :generatorID => 142},
     'Y-U-NO'           => { :imageID => 166088, :generatorID => 2, :default => "Y U NO" },
-    'Ermahgerd'        => { :imageID => 4967234, :generatorID => 1166512, :default => "Ermahgerd"}
+    'Ermahgerd'        => { :imageID => 4967234, :generatorID => 1166512, :default => "Ermahgerd"},
+    'Aand-Its-Gone'    => { :imageID => 5115616, :generatorID => 1209603}
   }
 end
