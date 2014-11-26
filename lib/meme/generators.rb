@@ -9,6 +9,8 @@ module Meme
     'Scumbag-Steve'    => { :imageID => 366130, :generatorID => 142},
     'Y-U-NO'           => { :imageID => 166088, :generatorID => 2, :default => "Y U NO" },
     'Ermahgerd'        => { :imageID => 4967234, :generatorID => 1166512, :default => "Ermahgerd"},
-    'Aand-Its-Gone'    => { :imageID => 5115616, :generatorID => 1209603}
+    'Aand-Its-Gone'    => { :imageID => 5115616, :generatorID => 1209603},
+    'Doge'             => { :imageID => 9872337, :generatorID => 2454136},
+    'Pleaseguy'        => { :imageID => 3219856, :generatorID => 668529, :default => "Please"}
   }
 end
