@@ -11,6 +11,7 @@ module Meme
     'Ermahgerd'        => { :imageID => 4967234, :generatorID => 1166512, :default => "Ermahgerd"},
     'Aand-Its-Gone'    => { :imageID => 5115616, :generatorID => 1209603},
     'Doge'             => { :imageID => 9872337, :generatorID => 2454136},
-    'Pleaseguy'        => { :imageID => 3219856, :generatorID => 668529, :default => "Please"}
+    'Pleaseguy'        => { :imageID => 3219856, :generatorID => 668529, :default => "Please"},
+    'Its-A-Trap'       => { :imageID => 11194792, :generatorID => 3166847 }
   }
 end
