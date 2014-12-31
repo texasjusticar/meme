@@ -1,6 +1,6 @@
 module Meme
   GENERATORS = {
-    'All-The-Things'   => { :imageID => 1985197, :generatorID => 318065 }
+    'All-The-Things'   => { :imageID => 1985197, :generatorID => 318065 },
     'Aand-Its-Gone'    => { :imageID => 5115616, :generatorID => 1209603},
     'Cocaine-Bear'     => { :imageID => 192738, :generatorID => 1396},
     'Doge'             => { :imageID => 9872337, :generatorID => 2454136},
