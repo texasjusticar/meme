@@ -18,8 +18,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Autocomplete for meme
 
+Add the following to your profile:
+```
+memecmds=(`ruby -r "{path to meme}/meme/lib/meme/generators.rb" -e "puts Meme::GENERATORS.keys"`)
+compctl -k memecmds meme
+```
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/meme/fork )
